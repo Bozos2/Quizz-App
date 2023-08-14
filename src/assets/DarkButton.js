@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
+import { useDispatch } from "react-redux";
+import { themeActions } from "../store/theme-slice";
+
 function DarkButton({ onClick }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const dispatch = useDispatch();
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
+    dispatch(themeActions.setIsDarkTheme(!isDarkMode));
   };
 
   return (
@@ -36,7 +41,7 @@ function DarkButton({ onClick }) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-6 h-6 "
+          className="w-6 h-6 text-purple-700"
           onClick={onClick}
         >
           <path

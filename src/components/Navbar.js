@@ -36,14 +36,12 @@ function Navbar() {
         <div>
           <Logo />
         </div>
-        <ul className="flex justify-between items-center space-x-4 no-underline text-purple-700  text-3xl dark:text-white ">
+        <ul className="flex justify-between items-center space-x-6 no-underline text-purple-700  text-xl dark:text-white ">
           <li className="hover:underline dark:hover:text-purple-400">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? "text-purple-800 underline dark:text-purple-400"
-                  : undefined
+                isActive ? " underline dark:text-purple-400" : undefined
               }
               end
             >
@@ -54,9 +52,7 @@ function Navbar() {
             <NavLink
               to="/quizpage"
               className={({ isActive }) =>
-                isActive
-                  ? "text-purple-800 underline dark:text-purple-400"
-                  : undefined
+                isActive ? "underline dark:text-purple-400" : undefined
               }
             >
               Categories
@@ -66,14 +62,24 @@ function Navbar() {
             <NavLink
               to="/leaderboard"
               className={({ isActive }) =>
-                isActive
-                  ? "text-purple-800 underline dark:text-purple-400 "
-                  : undefined
+                isActive ? " underline dark:text-purple-400 " : undefined
               }
             >
               Leaderboard
             </NavLink>
           </li>
+          {isAuth && (
+            <li className="hover:underline dark:hover:text-purple-400">
+              <NavLink
+                to={`/profile/${username}`}
+                className={({ isActive }) =>
+                  isActive ? " underline dark:text-purple-400 " : undefined
+                }
+              >
+                My Profile
+              </NavLink>
+            </li>
+          )}
         </ul>
         <div className="flex justify-center">
           <DarkButton onClick={handleThemeSwitch} />
@@ -82,13 +88,13 @@ function Navbar() {
             <div>
               <NavLink
                 to="/login"
-                className="border border-purple-700 rounded-md py-2 px-4 mt-2 h-11 inline-block mx-3  text-purple-700 font-bold dark:border-purple-400 dark:text-purple-400"
+                className="border border-purple-700 rounded-md py-2 px-4 mt-2 ml-4 h-11 inline-block mx-3  text-purple-700 font-bold tracking-wider dark:border-purple-400 dark:text-purple-400"
               >
                 Log in
               </NavLink>
               <NavLink
                 to="/signup"
-                className="border border-purple-700 rounded-md bg-purple-700 py-2 px-4 mt-2 h-11  inline-block mx-2  text-white font-bold dark:bg-purple-400 dark:border-purple-400"
+                className="border border-purple-700 rounded-md bg-purple-700 py-2 px-4 mt-2 h-11  inline-block mx-2  text-white font-bold tracking-wider dark:bg-purple-400 dark:border-purple-400"
               >
                 Sign up
               </NavLink>
@@ -98,12 +104,12 @@ function Navbar() {
             <div>
               <NavLink
                 to={`/profile/${username}`}
-                className=" py-2 px-4 mt-2 h-11 inline-block mx-3  text-purple-700 font-normal hover:underline hover:font-semibold dark:text-purple-400"
+                className=" py-2 px-4 mt-2 h-11 w-24 inline-block mx-3 text-center text-purple-700 font-normal hover:underline hover:font-semibold dark:text-purple-400"
               >
                 {username}
               </NavLink>
               <NavLink
-                className="border border-purple-700 rounded-md  py-2 px-4 mt-2 h-11  inline-block mx-2  text-purple-700 font-bold dark:border-purple-400 dark:text-purple-400"
+                className="border border-purple-700 rounded-md  py-2 px-4 mt-2 h-11  inline-block mx-2  text-purple-700 font-semibold tracking-wider dark:border-purple-400 dark:text-purple-400"
                 onClick={logoutHandler}
               >
                 Logout

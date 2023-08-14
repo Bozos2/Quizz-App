@@ -10,7 +10,9 @@ const QuestionsProgressBar = ({ currentIndex }) => {
         <div
           key={index}
           className={`w-12  h-2 m-1 rounded ${
-            index < filledSteps ? "bg-purple-700" : "bg-gray-300"
+            index < filledSteps
+              ? "bg-purple-700 dark:bg-purple-400"
+              : "bg-gray-300"
           }`}
         ></div>
       ))}

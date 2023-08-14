@@ -56,9 +56,13 @@ const SetAvatar = (props) => {
       return;
     }
 
-    const formData = {
-      avatar_id: selectedAvatar,
-    };
+    let formData = null;
+
+    if (selectedAvatar !== null) {
+      formData = {
+        avatar_id: selectedAvatar,
+      };
+    }
 
     try {
       const response = await fetch(

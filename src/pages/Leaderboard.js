@@ -50,9 +50,9 @@ function LeaderBoard() {
   return (
     <main>
       {infoAbout ? (
-        <div className="flex flex-col  items-center gap-16">
+        <div className="flex flex-col  items-center gap-16  text-purple-700 font-poppins dark:text-white">
           <h1 className=" mt-10 text-5xl font-semibold">Leaderboard</h1>
-          <div className="border border-2 border-purple-700 rounded-xl mt-2 mb-20">
+          <div className="border border-2 border-purple-700 rounded-xl mt-2 mb-20 p-10 dark:border-purple-400">
             <table className="gap-10">
               <thead>
                 <tr>
@@ -98,7 +98,7 @@ function LeaderBoard() {
                     <td className="font-semibold text-center p-4">
                       <Avatar size="40" round="120px" src={stats.avatar} />
                     </td>
-                    <td className="font-semibold text-center text-indigo-600 p-4">
+                    <td className="font-semibold text-center text-indigo-600 p-4 dark:text-indigo-300">
                       <Link
                         to={`/profile/${stats.username}`}
                         className="hover:underline hover:text-blue-800"

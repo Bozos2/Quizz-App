@@ -1,57 +1,3 @@
-/* import React from "react";
-import ReactDOM from "react-dom";
-
-const Backdrop = (props) => {
-  return (
-    <div
-      className="fixed inset-0 z-10 bg-black bg-opacity-75"
-      onClick={props.onConfirm}
-    />
-  );
-};
-
-const ModalOverlay = (props) => {
-  return (
-    <div className="fixed inset-0 flex justify-center items-center z-20">
-      <div className="flex flex-col justify-around bg-purple-700 border border-purple-500 rounded-2xl shadow-lg shadow-purple-500/40 outline-0 p-2">
-        <h2 className="text-white p-2 font-bold">{props.title}</h2>
-        <div className="p-4">
-          <p className="text-white">{props.messages}</p>
-        </div>
-        <div className="p-2 flex justify-end">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded cursor-pointer focus:outline-none focus:shadow-outline"
-            onClick={props.onConfirm}
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const NotificationModal = (props) => {
-  return (
-    <React.Fragment>
-      {ReactDOM.createPortal(
-        <Backdrop onConfirm={props.onConfirm} />,
-        document.getElementById("backdrop-root")
-      )}
-      {ReactDOM.createPortal(
-        <ModalOverlay
-          title={props.title}
-          messages={props.messages}
-          onConfirm={props.onConfirm}
-        />,
-        document.getElementById("overlay-root")
-      )}
-    </React.Fragment>
-  );
-};
-
-export default NotificationModal; */
-
 import React from "react";
 import ReactDOM from "react-dom";
 import Avatar from "react-avatar";
@@ -71,7 +17,7 @@ const ModalOverlay = (props) => {
       <div className="flex flex-col justify-around bg-purple-700 border border-purple-500 rounded-2xl shadow-lg shadow-purple-500/40 outline-0 p-2">
         <h2 className="text-white p-2 font-bold">{props.title}</h2>
         <div className="p-4">
-          <div className="grid grid-cols-4 gap-3 p-2">
+          <div className="grid grid-cols-4 gap-3 p-2 mb-4">
             {props.avatars &&
               props.avatars.map((avatar, index) => (
                 <div key={index} onClick={() => props.onClickHandler(avatar)}>

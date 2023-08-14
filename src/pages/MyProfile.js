@@ -6,6 +6,17 @@ import Avatar from "react-avatar";
 import MyProfileProgressBar from "../utils/MyProfileProgressBar";
 import SetAvatar from "../components/SetAvatar";
 
+const formatCategoryName = (category) => {
+  if (category === "science_and_nature") {
+    return "Science & Nature";
+  } else {
+    return category
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
+};
+
 function MyProfile() {
   const authUsername = useSelector((state) => state.auth.user);
   const { usernameId } = useParams();
@@ -36,7 +47,7 @@ function MyProfile() {
             ovr_inc_answers: responseData.data.statistics.incorrect_answers,
             categories: responseData.data.statistics.categories.map(
               (category) => ({
-                category: category.category,
+                category: formatCategoryName(category.category),
                 percentage:
                   category.percentage === 0 ? 70 : category.percentage,
                 correct_answers: category.correct_answers,
@@ -54,7 +65,7 @@ function MyProfile() {
       }
     };
     fetchData();
-  }, [isOwnProfile, usernameId]);
+  }, [isOwnProfile, usernameId, showModal]);
 
   const handleAvatarClick = () => {
     setShowModal(true);
@@ -63,7 +74,7 @@ function MyProfile() {
   return (
     <main>
       {infoAbout ? (
-        <div className="flex flex-col  items-center gap-16">
+        <div className="flex flex-col  items-center gap-16 font-poppins dark:text-white">
           <div className="flex flex-col  items-center  mt-12 gap-6">
             <div>
               <Avatar
@@ -87,23 +98,27 @@ function MyProfile() {
               </h5>
             </div>
           </div>
-          <div className="border border-2 border-purple-700 rounded-xl mt-2 mb-20">
+          <div className="border border-2 border-purple-700 rounded-xl mt-2 mb-20 p-10 dark:border-purple-400">
             <table className="gap-10">
               <thead>
                 <tr>
-                  <th className="font-bold text-xl p-4">Category</th>
-                  <th className="font-bold text-xl p-4">Correct Answers</th>
-                  <th className="font-bold text-xl w-64 p-4">Progress Bar</th>
-                  <th className="font-bold text-xl p-4">Percentage</th>
+                  <th className="text-lg text-slate-600 pr-24">Category</th>
+                  <th className="text-lg text-slate-600 p-4">
+                    Correct Answers
+                  </th>
+                  <th className="text-lg text-slate-600 w-64 p-4">
+                    Progress Bar
+                  </th>
+                  <th className="text-lg text-slate-600 p-4">Percentage</th>
                 </tr>
               </thead>
               <tbody>
                 {infoAbout.categories.map((category, index) => (
                   <tr key={index}>
-                    <td className="font-semibold text-center p-4">
+                    <td className="font-semibold  text-xl p-4">
                       {category.category}
                     </td>
-                    <td className="font-medium text-center p-4">
+                    <td className="font-medium  text-center p-4">
                       {category.correct_answers}/{category.total}
                     </td>
                     <td className="w-64 p-4">

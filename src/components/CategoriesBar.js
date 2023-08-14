@@ -7,7 +7,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto my-20 flex flex-wrap justify-center">
+    <div className="max-w-3xl mx-auto my-20 p-2 flex flex-wrap justify-center font-poppins">
       <div className="flex flex-wrap justify-center gap-2 w-full">
         <NavLink
           to="/quizpage/General Knowledge"
@@ -15,7 +15,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("General Knowledge")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6  dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -26,7 +26,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Sports")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6 dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -38,7 +38,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Animals")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6 dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -50,7 +50,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Mythology")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6 dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -62,7 +62,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Geography")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6  dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -74,7 +74,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("History")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6 dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -86,7 +86,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Politics")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6 dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -98,7 +98,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Science Nature")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6  dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -110,7 +110,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Film")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6  dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -122,7 +122,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Music")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6 dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >
@@ -134,7 +134,7 @@ function CategoriesBar({ categoryId, onCategoryClick }) {
           onClick={() => handleCategoryClick("Books")}
           className={({ isActive }) =>
             isActive
-              ? "text-base font-bold underline text-purple-800 rounded-2xl border-2  border-purple-800 py-2 px-6  dark:text-purple-300 dark:border-purple-300"
+              ? "text-base  text-white bg-purple-700 font-semibold rounded-2xl border  border-purple-700 py-2 px-6  dark:bg-purple-300 dark:border-purple-300 dark:text-slate-800"
               : "no-underline text-base font-semibold text-purple-700 border-purple-700 border py-2 px-6 rounded-2xl dark:text-purple-400 dark:border-purple-400"
           }
         >

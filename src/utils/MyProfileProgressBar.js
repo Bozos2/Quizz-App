@@ -1,17 +1,17 @@
 import React from "react";
 
 const categoryColors = {
-  sports: "bg-green-600",
-  general: "bg-yellow-600",
-  animals: "bg-orange-600",
-  mythology: "bg-blue-600",
-  geography: "bg-pink-600",
-  history: "bg-yellow-300",
-  politics: "bg-pink-900",
-  science_and_nature: "bg-blue-400",
-  film: "bg-green-400",
-  music: "bg-purple-600",
-  books: "bg-indigo-600",
+  Sports: "bg-green-600",
+  General: "bg-yellow-600",
+  Animals: "bg-orange-600",
+  Mythology: "bg-blue-600",
+  Geography: "bg-pink-600",
+  History: "bg-yellow-300",
+  Politics: "bg-pink-900",
+  "Science & Nature": "bg-sky-600",
+  Film: "bg-green-400",
+  Music: "bg-purple-600",
+  Books: "bg-indigo-600",
 };
 
 const MyProfileProgressBar = ({ percentege, category }) => {

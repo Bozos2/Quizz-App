@@ -41,11 +41,13 @@ function CircleProgressBar(props) {
   };
 
   return (
-    <div className="flex flex-col items-center ">
-      <h2 className="text-3xl text-purple-700 font-bold mb-6">
+    <div className="flex flex-col items-center">
+      <h2 className="text-3xl text-purple-700 font-bold mb-6 dark:text-white">
         Congratulations your quiz is finished!
       </h2>
-      <h4 className="mb-16 text-purple-700 font-bold text-2xl">Result:</h4>
+      <h4 className="mb-16 text-purple-700 font-bold text-2xl dark:text-white">
+        Result:
+      </h4>
       <div className="w-96 h-96 mb-16">
         <CircularProgressbarWithChildren
           value={value}
@@ -59,8 +61,8 @@ function CircleProgressBar(props) {
             strokeLinecap: "round",
             textSize: "28px",
             pathTransitionDuration: shouldAnimate ? 2.7 : 0,
-            pathColor: `rgb(123, 31, 162)`,
-            textColor: "#7B1FA2",
+            pathColor: `#1976D2`,
+            textColor: "#d6d6d6",
             trailColor: "#d6d6d6",
           })}
         ></CircularProgressbarWithChildren>
