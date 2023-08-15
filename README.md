@@ -5,9 +5,9 @@ The frontend development was carried out by myself, while the backend was develo
 ## Installation
 To get the project up and running locally, follow these steps:
 
-**1.**:Clone the repository to your local machine using the following command: # git clone URL 
-**2**: Navigate to the project directory: # cd repo-name
-**3**: Install the required dependencies using npm: # npm install 
+**1.**:Clone the repository to your local machine using the following command: <div style="background-color: #f0f0f0; padding: 10px;"> git clone URL </> <space><space>
+**2**: Navigate to the project directory: <div style="background-color: #f0f0f0; padding: 10px;"> cd repo-name </div><space><space>
+**3**: Install the required dependencies using npm: <div style="background-color: #f0f0f0; padding: 10px;"> npm install </div>
 
 ### `npm start`
 
@@ -26,8 +26,8 @@ In order to use the application, you need to register and verify your account.
 **Databases**: MongoDB (for user data), Firebase (for questions)
 
 ### Images 
-![Home Page](https://prnt.sc/cfgmoxsadlOp)
-![Categories](https://prnt.sc/7LPOhneX29f-)
+![Home Page](https://imgur.com/Ljt0uuH)
+![Categories](https://imgur.com/cwYZbXq)
 
 ## Appendix
 
