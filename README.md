@@ -3,7 +3,7 @@ This is a quiz application with over 600 questions from 11 categories.
 The frontend development was carried out by myself, while the backend was developed by FijiBoi.
 
 ## Backend repository 
-[https://github.com/emeraldrazer/Quizz-API]https://github.com/emeraldrazer/Quizz-API
+https://github.com/emeraldrazer/Quizz-API
 
 ## Installation
 To get the project up and running locally, follow these steps:
