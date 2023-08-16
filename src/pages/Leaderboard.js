@@ -22,7 +22,7 @@ function LeaderBoard() {
           username: user.username,
           avatar: user.avatar_id,
           level: user.game_level,
-          points: user.game_points,
+          points: user.game_xp,
           overall: user.statistics.overall,
           correct_answers: user.statistics.correct_answers,
           percentage: user.statistics.percentage,

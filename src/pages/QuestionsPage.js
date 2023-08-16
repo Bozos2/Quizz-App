@@ -6,6 +6,20 @@ import { shuffle } from "../utils/shuffle";
 import QuestionsProgressBar from "../utils/QuestionsProgressBar";
 import CircleProgressBar from "../utils/CircleProgressBar";
 
+const formatCategoryName = (category) => {
+  if (category === "Science Nature") {
+    return "science_and_nature";
+  } else if (category === "General Knowledge") {
+    return "general";
+  } else {
+    const words = category.split("_");
+    const formattedWords = words.map(
+      (word) => word.charAt(0).toLowerCase() + word.slice(1)
+    );
+    return formattedWords.join(" ");
+  }
+};
+
 function QuestionsPage() {
   const { questionsId } = useParams();
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
@@ -29,6 +43,11 @@ function QuestionsPage() {
   const correctAnswers = filteredQuestions.questions.map(
     (question) => question.correct_answer
   );
+
+  const filteredCategory = formatCategoryName(
+    filteredQuestions.questions[0].category
+  );
+  console.log(filteredCategory);
 
   const handleNextQuestion = useCallback(() => {
     if (activeQuestionIndex + 1 === filteredQuestions.questions.length) {
@@ -74,7 +93,7 @@ function QuestionsPage() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            _id: Id,
+            id: Id,
           }),
         }
       );
@@ -104,14 +123,12 @@ function QuestionsPage() {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
-            game_level: 2,
-            game_points: 120,
-            category: "Books",
-            correct_answers: 10,
-            incorrect_answers: 0,
+            game_xp: gameXp,
+            category: filteredCategory,
+            correct_answers: result,
+            incorrect_answers: 10 - result,
           }),
         }
       );

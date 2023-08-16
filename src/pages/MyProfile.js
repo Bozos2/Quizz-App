@@ -41,15 +41,14 @@ function MyProfile() {
             username: responseData.data.username,
             avatar: responseData.data.avatar_id,
             level: responseData.data.game_level,
-            points: responseData.data.game_points,
+            points: responseData.data.game_xp,
             overall: responseData.data.statistics.overall,
             ovr_corr_answers: responseData.data.statistics.correct_answers,
             ovr_inc_answers: responseData.data.statistics.incorrect_answers,
             categories: responseData.data.statistics.categories.map(
               (category) => ({
                 category: formatCategoryName(category.category),
-                percentage:
-                  category.percentage === 0 ? 70 : category.percentage,
+                percentage: category.percentage,
                 correct_answers: category.correct_answers,
                 incorrect_answers: category.incorrect_answers,
                 total: category.total,

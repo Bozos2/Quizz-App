@@ -62,7 +62,7 @@ function CircleProgressBar(props) {
             textSize: "28px",
             pathTransitionDuration: shouldAnimate ? 2.7 : 0,
             pathColor: `#1976D2`,
-            textColor: "#d6d6d6",
+            textColor: "#1976D2",
             trailColor: "#d6d6d6",
           })}
         ></CircularProgressbarWithChildren>
