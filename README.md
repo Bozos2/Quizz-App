@@ -8,9 +8,9 @@ https://github.com/emeraldrazer/Quizz-API
 ## Installation
 To get the project up and running locally, follow these steps:
 
-**1.**:Clone the repository to your local machine using the following command: <div style="background-color: #f0f0f0; padding: 10px;"> git clone URL </> <space><space>
-**2**: Navigate to the project directory: <div style="background-color: #f0f0f0; padding: 10px;"> cd repo-name </div><space><space>
-**3**: Install the required dependencies using npm: <div style="background-color: #f0f0f0; padding: 10px;"> npm install </div>
+**1.**:Clone the repository to your local machine using the following command:  `git clone URL` 
+**2**: Navigate to the project directory:  `cd repo-name` 
+**3**: Install the required dependencies using npm: `npm install` 
 
 ### `npm start`
 
@@ -29,8 +29,10 @@ In order to use the application, you need to register and verify your account.
 **Databases**: MongoDB (for user data), Firebase (for questions)
 
 ### Images 
-![Home Page](https://imgur.com/Ljt0uuH)
-![Categories](https://imgur.com/cwYZbXq)
+![Home](https://github.com/Bozos2/Quizz-App/assets/125981814/044802fe-4ac5-4c59-a132-a9a516afd244)
+
+![DarkTheme](https://github.com/Bozos2/Quizz-App/assets/125981814/8706b523-fa56-4666-a318-2666983a2c18)
+
 
 ## Appendix
 
