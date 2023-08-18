@@ -8,9 +8,9 @@ https://github.com/emeraldrazer/Quizz-API
 ## Installation
 To get the project up and running locally, follow these steps:
 
-**1.**:Clone the repository to your local machine using the following command:  `git clone URL` 
-**2.**: Navigate to the project directory:  `cd repo-name` 
-**3.**: Install the required dependencies using npm: `npm install` 
+**1.**Clone the repository to your local machine using the following command:  `git clone URL` 
+**2.** Navigate to the project directory:  `cd repo-name` 
+**3.** Install the required dependencies using npm: `npm install` 
 
 ### `npm start`
 
